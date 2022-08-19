@@ -28,8 +28,8 @@ public class LevelGeneration : MonoBehaviour {
 		for (int i = 0; i < waves.Length; i++) {
 			waves [i] = new Wave ();
 			waves [i].seed = Random.Range (0, 60000);
-			waves [i].amplitude = Random.Range (0.25f, 1);
-			waves [i].frequency = Random.Range (0.5f, 1);
+			waves [i].amplitude = Random.Range (0.1f, 1);
+			waves [i].frequency = Random.Range (0.1f, 0.4f);
 		}
 		// get the tile dimensions from the tile Prefab
 		Vector3 tileSize = tilePrefab.GetComponent<MeshRenderer> ().bounds.size;
