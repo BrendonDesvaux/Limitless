@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LevelGeneration : MonoBehaviour {
 
-	[SerializeField]
 	private int mapWidthInTiles, mapDepthInTiles;
 
 	[SerializeField]
@@ -16,11 +15,22 @@ public class LevelGeneration : MonoBehaviour {
 	TerrainType tert;
 
 	void Start() {
+		mapWidthInTiles = Random.Range (10, 100);
+		mapDepthInTiles = Random.Range (10, 100);
 		tert = ChooseTerrainType ();
 		GenerateMap ();
 	}
 
 	void GenerateMap() {
+
+		// Create a random number of Wave
+		Wave[] waves = new Wave[Random.Range (2, 5)];
+		for (int i = 0; i < waves.Length; i++) {
+			waves [i] = new Wave ();
+			waves [i].seed = Random.Range (0, 60000);
+			waves [i].amplitude = Random.Range (0.25f, 1);
+			waves [i].frequency = Random.Range (0.5f, 1);
+		}
 		// get the tile dimensions from the tile Prefab
 		Vector3 tileSize = tilePrefab.GetComponent<MeshRenderer> ().bounds.size;
 		int tileWidth = (int)tileSize.x;
@@ -36,6 +46,7 @@ public class LevelGeneration : MonoBehaviour {
 				// instantiate a new Tile
 				GameObject tile = Instantiate (tilePrefab, tilePosition, Quaternion.identity) as GameObject;
 				tile.GetComponent<TileGeneration> ().terrainType = tert;
+				tile.GetComponent<TileGeneration> ().waves = waves;
 			}
 		}
 	}

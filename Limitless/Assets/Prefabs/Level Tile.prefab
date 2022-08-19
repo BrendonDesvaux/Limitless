@@ -170,9 +170,21 @@ MonoBehaviour:
   - seed: 5613
     frequency: 1
     amplitude: 1
-  - seed: 9551
+  - seed: 3
     frequency: 0.5
-    amplitude: 2
-  - seed: 6712
-    frequency: 0.25
-    amplitude: 4
+    amplitude: 20
+  - seed: 671
+    frequency: 0.5
+    amplitude: 20
+  - seed: 75643
+    frequency: 0.5
+    amplitude: 20
+  - seed: 7564
+    frequency: 0.5
+    amplitude: 20
+  - seed: 756
+    frequency: 0.5
+    amplitude: 20
+  - seed: 56
+    frequency: 3
+    amplitude: 1

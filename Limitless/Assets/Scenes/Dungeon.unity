@@ -458,6 +458,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1817611489436693132, guid: 0275592d2903b4fccb6f2deb6bc2814a, type: 3}
+      propertyPath: terrainTypes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1817611489436693133, guid: 0275592d2903b4fccb6f2deb6bc2814a, type: 3}
       propertyPath: m_Name
       value: Level

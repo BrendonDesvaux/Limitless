@@ -27,8 +27,7 @@ public class TileGeneration : MonoBehaviour {
 	[SerializeField]
 	private AnimationCurve heightCurve;
 
-	[SerializeField]
-	private Wave[] waves;
+	public Wave[] waves;
 
 	void Start() {
 		GenerateTile ();
@@ -43,7 +42,6 @@ public class TileGeneration : MonoBehaviour {
 		// calculate the offsets based on the tile position
 		float offsetX = -this.gameObject.transform.position.x;
 		float offsetZ = -this.gameObject.transform.position.z;
-
 		// generate a heightMap using noise
 		float[,] heightMap = this.noiseMapGeneration.GenerateNoiseMap (tileDepth, tileWidth, this.levelScale, offsetX, offsetZ, waves);
 
