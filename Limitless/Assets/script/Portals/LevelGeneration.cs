@@ -9,10 +9,14 @@ public class LevelGeneration : MonoBehaviour {
 	}
 
 	void GenerateMap() {
-		int Biom = Random.Range (0, 0);
+		int biom = Random.Range (0, 3);
 		transform.GetComponent<HeightsGenerator>().Offset = Random.Range (0, 10000000.0f);
 		transform.GetComponent<HeightsGenerator>().Generate();
-		transform.GetComponent<DungeonTexturesGenerator>().chosenBiom = Biom;
+		transform.GetComponent<DungeonTexturesGenerator>().chosenBiom = biom;
 		transform.GetComponent<DungeonTexturesGenerator>().Generate();
+		if(biom != 1) {
+			transform.GetComponent<GrassGenerator>().Generate();
+		}
+		transform.GetComponent<TreeGenerator>().Generate();
 	}
 }
