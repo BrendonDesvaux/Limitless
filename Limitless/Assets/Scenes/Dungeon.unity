@@ -176,6 +176,9 @@ MonoBehaviour:
   sensitivity: 1
   speed: 30
   maxZoom: 20
+  clampMax: 90
+  clampMin: -4
+  zoomPosition: 0
 --- !u!81 &140859923
 AudioListener:
   m_ObjectHideFlags: 0
@@ -978,7 +981,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 0
   desertMap:
-  - Texture: {fileID: 2800000, guid: e6766e0b97c851c49866fc09f4bc8fd7, type: 3}
+  - Texture: {fileID: 2800000, guid: 9450b63ccdcd7f74cb380119208ec5c2, type: 3}
     Tilesize: {x: 30, y: 30}
     HeightCurve:
       serializedVersion: 2
