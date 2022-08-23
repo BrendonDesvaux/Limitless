@@ -17,22 +17,6 @@ public class mouvements : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    //if player collider is collinding with groung
-    private void OnCollisionEnter(Collision collision)
-    {
-        //if collider is ground
-        if (collision.gameObject.tag == "ground")
-        {
-            isGrounded = true;
-        }
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "ground")
-        {
-            isGrounded = false;
-        }
-    }
     void Update()
     {
         
