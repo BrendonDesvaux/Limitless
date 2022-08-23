@@ -4,20 +4,16 @@ using UnityEngine;
 
 public class PlayerTracker : MonoBehaviour
 {
+
     public GameObject target;
-    public float rotateSpeed = 50;
+    public float rotateSpeed = 5;
     Vector3 offset;
     public Transform parentObject;
-    public float zoomLevel = 10;
+    public float zoomLevel;
     public float sensitivity = 1;
     public float speed = 30;
     public float maxZoom = 20;
-
-    public float clampMax = 90;
-    public float clampMin = -4;
-
-    float clamped;
-    public float zoomPosition;
+    float zoomPosition;
     float rotation = 0.2f;
 
     void Start()
@@ -28,21 +24,14 @@ public class PlayerTracker : MonoBehaviour
 
     void LateUpdate()
     {
-        float horizontal = Input.GetAxis("Mouse X") * rotateSpeed * Time.deltaTime;
-        float vertical = Input.GetAxis("Mouse Y") * rotateSpeed * Time.deltaTime;
+        float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
         target.transform.Rotate(0, horizontal, 0);
-        transform.Rotate(vertical, 0, 0);
-        clamped += vertical;
-        clamped = Mathf.Clamp(clamped, clampMin, clampMax);
-        transform.rotation = Quaternion.Euler(clamped, 0, 0);
-
 
         float desiredAngle = target.transform.eulerAngles.y;
         Quaternion rotation = Quaternion.Euler(0, desiredAngle, 0);
         transform.position = target.transform.position - (rotation * offset);
 
-
-        //transform.LookAt(target.transform);
+        transform.LookAt(target.transform);
 
         zoomLevel += Input.mouseScrollDelta.y * sensitivity;
         zoomLevel = Mathf.Clamp(zoomLevel, 0, maxZoom);
