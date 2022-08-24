@@ -14,7 +14,7 @@ public class LevelGeneration : MonoBehaviour {
 		transform.GetComponent<HeightsGenerator>().Generate();
 		transform.GetComponent<DungeonTexturesGenerator>().chosenBiom = biom;
 		transform.GetComponent<DungeonTexturesGenerator>().Generate();
-		if(biom != 1) {
+		if(biom == 0) {
 			transform.GetComponent<GrassGenerator>().Generate();
 		}
 		transform.GetComponent<TreeGenerator>().Generate();
