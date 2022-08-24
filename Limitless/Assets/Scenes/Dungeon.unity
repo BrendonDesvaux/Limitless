@@ -525,6 +525,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a8171b15c0ee47c78c2fe25b1f08dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  water: {fileID: 169576785}
+  blueWater: {fileID: 2100000, guid: 89dccc86c1ae44dfbb1ac966c0e9fd77, type: 2}
+  ice: {fileID: 2100000, guid: aa31ceeddf57d45f695f110ed70c571a, type: 2}
 --- !u!114 &1315963327
 MonoBehaviour:
   m_ObjectHideFlags: 0
