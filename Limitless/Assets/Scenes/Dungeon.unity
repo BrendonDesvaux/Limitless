@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 169576788}
   - component: {fileID: 169576787}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,7 +199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 169576785}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 501, y: 2.4, z: 505.6}
+  m_LocalPosition: {x: 501, y: 9.4, z: 505.6}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -368,14 +368,14 @@ MonoBehaviour:
   Scale: 2
   Lacunarity: 2
   Persistance: 0.5
-  Offset: 2533.1438
-  MinLevel: 0
-  MaxLevel: 10
-  MaxSteepness: 8
-  IslandsSize: -0.05
-  Density: 6
+  Offset: 1733.8878
+  MinLevel: 22
+  MaxLevel: 100
+  MaxSteepness: 49
+  IslandsSize: 0
+  Density: 27
   Randomize: 1
-  AutoUpdate: 1
+  AutoUpdate: 0
   GrassTextures:
   - {fileID: 2800000, guid: 91a1945982e98be4d9fe3e3d12fdebd8, type: 3}
   - {fileID: 2800000, guid: cf3069941001b5c46b1f13d4551d0fd9, type: 3}

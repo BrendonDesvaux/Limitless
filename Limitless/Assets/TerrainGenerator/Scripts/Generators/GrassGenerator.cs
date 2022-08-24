@@ -59,7 +59,7 @@ namespace Assets.Scripts.MapGenerator.Generators
                 {
                     for (int y = 0; y < terrainData.alphamapHeight; y++)
                     {
-                        float height = terrainData.GetHeight(x, y);
+                        float height = terrainData.GetHeight(y, x);
                         float xScaled = (x + Random.Range(-1f, 1f)) / terrainData.alphamapWidth;
                         float yScaled = (y + Random.Range(-1f, 1f)) / terrainData.alphamapHeight;
                         float steepness = terrainData.GetSteepness(xScaled, yScaled);
