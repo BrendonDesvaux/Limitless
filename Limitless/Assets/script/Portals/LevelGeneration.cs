@@ -2,17 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Assets.Scripts.MapGenerator.Generators;
+// using System.Threading.Tasks;
+// using System.IO;
+
 
 public class LevelGeneration : MonoBehaviour {
 	public GameObject water;
 	public Material blueWater;
 	public Material ice;
+	public TerrainData currentTerrainData;
+	public TerrainData newFile;
+
 	void Start() {
 		GenerateMap ();
 	}
 
 	void GenerateMap() {
-		TerrainData terrainData = new TerrainData ();
+		transform.GetComponent<Terrain> ().terrainData = new TerrainData();
+		transform.GetComponent<TerrainCollider> ().terrainData = transform.GetComponent<Terrain> ().terrainData;
+
 		int biom = Random.Range (0, 3);
 		transform.GetComponent<HeightsGenerator>().Offset = Random.Range (0, 10000000.0f);
 		transform.GetComponent<HeightsGenerator>().Generate();
@@ -50,8 +58,21 @@ public class LevelGeneration : MonoBehaviour {
 			transform.GetComponent<GrassGenerator>().Generate();
 		}
 		transform.GetComponent<TreeGenerator>().Generate();
-
-		Terrain.activeTerrain.terrainData = terrainData;
-		transform.GetComponent<TerrainCollider> ().terrainData = terrainData;
 	}
+
+	// async void OnApplicationQuit()
+    // {
+    //     Debug.Log("Application ending after " + Time.time + " seconds");
+	// 	//reset terraindata file
+	// 	currentTerrainData = newFile;
+	// 	string startFile = "Assets/Scripts/Portal/NewTerrain.Asset";
+    //     string endFile = "Assets/Scripts/Portal/DungeonMainTerrainData.Asset";
+    //     using (FileStream sourceStream = File.Open(startFile, FileMode.Open))
+    //     {
+    //         using (FileStream destinationStream = File.Open(endFile, FileMode.Open))
+    //         {
+    //             await sourceStream.CopyToAsync(destinationStream);
+    //         }
+    //     }
+    // }
 }
