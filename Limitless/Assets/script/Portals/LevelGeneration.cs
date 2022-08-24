@@ -12,6 +12,7 @@ public class LevelGeneration : MonoBehaviour {
 	}
 
 	void GenerateMap() {
+		TerrainData terrainData = new TerrainData ();
 		int biom = Random.Range (0, 3);
 		transform.GetComponent<HeightsGenerator>().Offset = Random.Range (0, 10000000.0f);
 		transform.GetComponent<HeightsGenerator>().Generate();
@@ -33,7 +34,7 @@ public class LevelGeneration : MonoBehaviour {
 				water.AddComponent<MeshCollider>();
 			}else{
 				// change water tag to 'untagged'
-				water.tag = "untagged";
+				water.tag = "Untagged";
 				// change water color to blueWater
 				water.GetComponent<Renderer>().material = blueWater;
 				// remove collider to water
@@ -49,5 +50,8 @@ public class LevelGeneration : MonoBehaviour {
 			transform.GetComponent<GrassGenerator>().Generate();
 		}
 		transform.GetComponent<TreeGenerator>().Generate();
+
+		Terrain.activeTerrain.terrainData = terrainData;
+		transform.GetComponent<TerrainCollider> ().terrainData = terrainData;
 	}
 }
