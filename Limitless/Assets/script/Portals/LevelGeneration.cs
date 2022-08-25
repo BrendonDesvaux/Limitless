@@ -18,21 +18,25 @@ public class LevelGeneration : MonoBehaviour {
 	}
 
 	void GenerateMap() {
+
 		transform.GetComponent<Terrain> ().terrainData = new TerrainData();
 		transform.GetComponent<TerrainCollider> ().terrainData = transform.GetComponent<Terrain> ().terrainData;
 
-		int biom = Random.Range (0, 3);
+		// Find GameManager and get the generated dungeon type
+		GameObject gameManager = GameObject.Find ("GameManager");
+		int biom = gameManager.GetComponent<GameManager>().generatedDungeonType;
+
 		transform.GetComponent<HeightsGenerator>().Offset = Random.Range (0, 10000000.0f);
 		transform.GetComponent<HeightsGenerator>().Generate();
 		transform.GetComponent<DungeonTexturesGenerator>().chosenBiom = biom;
 		transform.GetComponent<DungeonTexturesGenerator>().Generate();
-		float waterLevel = Random.Range(2.1f, 11);
+		float waterLevel = Random.Range(3.4f, 11);
 
 		transform.GetComponent<GrassGenerator>().MinLevel = 0;
 		transform.GetComponent<TreeGenerator>().MinLevel = 0;
 		if (Random.Range (0, 2) == 0) {
-			transform.GetComponent<GrassGenerator>().MinLevel = (waterLevel - 2.4f)*3+1;
-			transform.GetComponent<TreeGenerator>().MinLevel = (waterLevel - 2.4f)*3+1;
+			transform.GetComponent<GrassGenerator>().MinLevel = (waterLevel - 3.4f)*3+1;
+			transform.GetComponent<TreeGenerator>().MinLevel = (waterLevel - 3.4f)*3+1;
 			if(biom == 1) {
 				// change water tag to 'ground'
 				water.tag = "ground";

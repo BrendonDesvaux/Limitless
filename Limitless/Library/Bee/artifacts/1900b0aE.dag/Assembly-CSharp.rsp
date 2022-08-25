@@ -364,6 +364,7 @@
 "Assets/script/MeshGenerator.cs"
 "Assets/script/mouvements.cs"
 "Assets/script/PlayerTracker.cs"
+"Assets/script/Portals/DungeonsGenerator.cs"
 "Assets/script/Portals/DungeonTexturesGenerator.cs"
 "Assets/script/Portals/EnterDungeon.cs"
 "Assets/script/Portals/LevelGeneration.cs"

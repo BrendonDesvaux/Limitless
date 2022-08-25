@@ -373,7 +373,7 @@ MonoBehaviour:
   MaxLevel: 100
   MaxSteepness: 49
   IslandsSize: 0
-  Density: 27
+  Density: 1
   Randomize: 1
   AutoUpdate: 0
   GrassTextures:
