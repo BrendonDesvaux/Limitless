@@ -59,7 +59,7 @@ public class LevelGeneration : MonoBehaviour {
 		}
 		
 		if(biom == 0) {
-			transform.GetComponent<GrassGenerator>().Generate();
+			// transform.GetComponent<GrassGenerator>().Generate(); too heavy, to be updated
 		}
 		transform.GetComponent<TreeGenerator>().Generate();
 	}
