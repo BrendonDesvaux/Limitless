@@ -7,9 +7,9 @@ TerrainLayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: layer_ground_desertSandSmallDunes_1k_h1dc7420b2ece7392
-  m_DiffuseTexture: {fileID: 2800000, guid: 01d3ed40e9eab104286f2726dda76764, type: 3}
-  m_NormalMapTexture: {fileID: 0}
-  m_MaskMapTexture: {fileID: 0}
+  m_DiffuseTexture: {fileID: 2800000, guid: 9450b63ccdcd7f74cb380119208ec5c2, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: c7613ec0e5872cb4fb42bd2d187ef0bb, type: 3}
+  m_MaskMapTexture: {fileID: 2800000, guid: 01d3ed40e9eab104286f2726dda76764, type: 3}
   m_TileSize: {x: 100, y: 100}
   m_TileOffset: {x: 0, y: 0}
   m_Specular: {r: 0, g: 0, b: 0, a: 0}

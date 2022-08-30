@@ -1,0 +1,624 @@
+Unity Editor version:    2021.3.8f1 (b30333d56e81)
+Branch:                  2021.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 12.3.1 (Build 21E258)
+Darwin version:          21.4.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        8192 MB
+Using pre-set license
+Pro License: YES
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+/Users/polonit/Documents/GitHub/Limitless/Limitless
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+54717
+Successfully changed project path to: /Users/polonit/Documents/GitHub/Limitless/Limitless
+/Users/polonit/Documents/GitHub/Limitless/Limitless
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 109.12 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.8f1 (b30333d56e81)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/polonit/Documents/GitHub/Limitless/Limitless/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+ preferred device: Apple M1 (high power)
+Metal devices available: 1
+0: Apple M1 (high power)
+Using device Apple M1 (high power)
+Initializing Metal device caps: Apple M1
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56930
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.8f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.8f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.8f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.8f1/PlaybackEngines/AppleTVSupport/UnityEditor.AppleTV.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.8f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.8f1/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.019209 seconds.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+[usbmuxd] Send listen message
+Native extension for AppleTV target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 117.91 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.783 seconds
+Domain Reload Profiling:
+	ReloadAssembly (784ms)
+		BeginReloadAssembly (88ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (561ms)
+			LoadAssemblies (98ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (108ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (373ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (138ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (118ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (77ms)
+				ProcessInitializeOnLoadMethodAttributes (38ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005296 seconds.
+An ADB process has shut down when we were accessing it, the following System.ArgumentOutOfRangeException has been thrown: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/polonit/Documents/GitHub/Limitless/Limitless/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/polonit/Documents/GitHub/Limitless/Limitless/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+OnLevelWasLoaded was found on GameManager
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for AppleTV target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.36 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.537 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1538ms)
+		BeginReloadAssembly (202ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (125ms)
+		EndReloadAssembly (1227ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (381ms)
+			ReleaseScriptCaches (10ms)
+			RebuildScriptCaches (136ms)
+			SetupLoadedEditorAssemblies (504ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (64ms)
+				SetLoadedEditorAssemblies (4ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (132ms)
+				ProcessInitializeOnLoadAttributes (270ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.18 seconds
+Refreshing native plugins compatible for Editor in 1.08 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3641 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (19.9 KB). Loaded Objects now: 4131.
+Memory consumption went from 286.4 MB to 286.4 MB.
+Total: 13.828250 ms (FindLiveObjects: 0.617625 ms CreateObjectMapping: 0.219875 ms MarkObjects: 12.892333 ms  DeleteObjects: 0.097209 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2195377.388964 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '958f87492d1e40e3c8392d8e50e4176c') in 0.020287 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 117.168274 seconds.
+  path: Assets/Prefabs/Desert.fbx
+  artifactKey: Guid(7f230f0199fcf7c48895bdd08dbf2094) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Desert.fbx using Guid(7f230f0199fcf7c48895bdd08dbf2094) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c067f46399cc37ac6061e177502395b') in 14.324185 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 609.907246 seconds.
+  path: Assets/Materials/Player.physicMaterial
+  artifactKey: Guid(3b76e3c2a8d764df3af451bc7e53c05a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Player.physicMaterial using Guid(3b76e3c2a8d764df3af451bc7e53c05a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8ea90a5b9896689d813959d8dc95a60') in 0.155191 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/Materials/White.mat
+  artifactKey: Guid(aa31ceeddf57d45f695f110ed70c571a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/White.mat using Guid(aa31ceeddf57d45f695f110ed70c571a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77b12a187baf30e630432a529019ec1b') in 0.096315 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Materials/Rocks 1 - Standard.mat
+  artifactKey: Guid(e2478ff0308464a4ca26e4f9da15564d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Rocks 1 - Standard.mat using Guid(e2478ff0308464a4ca26e4f9da15564d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f0a3f79123f183cd507e02847842f7d') in 0.379716 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.454812 seconds.
+  path: Assets/textures/displace.jpg
+  artifactKey: Guid(77ff1a36e250be6419496f11c64b1937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/textures/displace.jpg using Guid(77ff1a36e250be6419496f11c64b1937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4900350e4c0a5ad4307cb1bbb70427d7') in 0.814301 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/textures/material_0_normal.jpeg
+  artifactKey: Guid(21373ec0b66d9984d837ebb9c9bb5367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/textures/material_0_normal.jpeg using Guid(21373ec0b66d9984d837ebb9c9bb5367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91fcd38a73648c0503a5a8cb7db17acc') in 1.330208 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/textures/Rock_9_Mixed_AO.jpg
+  artifactKey: Guid(0e48f6c9c798c774db67fd1316c590d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/textures/Rock_9_Mixed_AO.jpg using Guid(0e48f6c9c798c774db67fd1316c590d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5987452a0e72333f033b209716ced982') in 0.010789 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/textures/Rock_9_Base_Color.jpg
+  artifactKey: Guid(a45b806bee67a4344ba934c996dc68c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/textures/Rock_9_Base_Color.jpg using Guid(a45b806bee67a4344ba934c996dc68c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd172a1449a95e1b532e2eeb447ae1010') in 0.008138 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/textures/Rock_1_Glossiness.jpg
+  artifactKey: Guid(4942fd1ce5ae95b47a70d564c9e54cd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/textures/Rock_1_Glossiness.jpg using Guid(4942fd1ce5ae95b47a70d564c9e54cd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9fedbe0f31f6bcf6bfc2201699259e6') in 0.008780 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/textures/Rock_1_occlusion.jpg
+  artifactKey: Guid(6effb23a9df250c4a9e158ff60d0fec7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/textures/Rock_1_occlusion.jpg using Guid(6effb23a9df250c4a9e158ff60d0fec7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cbc943825a1abcc138f32fccd537db4') in 0.009636 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/textures/stone_brick_wall_texture.jpg
+  artifactKey: Guid(f15763e7939c60b46ba52adc42b951e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/textures/stone_brick_wall_texture.jpg using Guid(f15763e7939c60b46ba52adc42b951e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '951a477e6bd753c47e75df7001a67a9f') in 0.009406 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/textures/ground_desertSandSmallDunes_1k_n.png
+  artifactKey: Guid(c7613ec0e5872cb4fb42bd2d187ef0bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/textures/ground_desertSandSmallDunes_1k_n.png using Guid(c7613ec0e5872cb4fb42bd2d187ef0bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3c4cc425fbc810644aa318b41a71ee2') in 0.056237 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/textures/Rock_1_Normal.jpg
+  artifactKey: Guid(86ed9239ad514184b9f4dcd9fb678c2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/textures/Rock_1_Normal.jpg using Guid(86ed9239ad514184b9f4dcd9fb678c2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6114ecb42ae18af30961f171f54d5e6') in 0.008639 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/textures/Rock_1_Specular.jpg
+  artifactKey: Guid(2b7ec1e34ffabbd4599a22f15c6dddaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/textures/Rock_1_Specular.jpg using Guid(2b7ec1e34ffabbd4599a22f15c6dddaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34f1e9d3bf9341a64fa51c11f5a7c60e') in 0.008042 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/textures/stone_brick_wall_texture_NORMAL.jpg
+  artifactKey: Guid(4b100aea82e104d409765742e674141b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/textures/stone_brick_wall_texture_NORMAL.jpg using Guid(4b100aea82e104d409765742e674141b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ee4e8b1e809ccf9a539d414372b80c6') in 0.011542 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/textures/Rock_9_Normal.jpg
+  artifactKey: Guid(ad703c1ef3cdc4a4f9ee8967fcf2b266) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/textures/Rock_9_Normal.jpg using Guid(ad703c1ef3cdc4a4f9ee8967fcf2b266) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '562c5a48e31be2128cefdeee0a4fb73f') in 0.010942 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.700346 seconds.
+  path: Assets/Conifers [BOTD]/Shared Sources/Textures/BODT Conifer Branches [Trans] [Smoothness].psd
+  artifactKey: Guid(ca6a46a4d37514e00ae826202bad794e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Conifers [BOTD]/Shared Sources/Textures/BODT Conifer Branches [Trans] [Smoothness].psd using Guid(ca6a46a4d37514e00ae826202bad794e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a824b863d72e75b738621122a5190453') in 1.356767 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/GrassFlowers/Textures/GrassFlowers/grassFlower03.tga
+  artifactKey: Guid(c6bde8cacfa93444fa98152cb9e36815) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GrassFlowers/Textures/GrassFlowers/grassFlower03.tga using Guid(c6bde8cacfa93444fa98152cb9e36815) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6f9c16270ebb805628dee301819f868') in 0.673027 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 35.620922 seconds.
+  path: Assets/Prefabs/rocks/rock_2.fbx
+  artifactKey: Guid(981316d4e1b0dd94fbea062c5833d433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/rocks/rock_2.fbx using Guid(981316d4e1b0dd94fbea062c5833d433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfaf7771809a20249f71070a17d6e120') in 0.081794 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Roof_3.mat
+  artifactKey: Guid(7ce693547ae759e4c95ee9c785e97232) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Roof_3.mat using Guid(7ce693547ae759e4c95ee9c785e97232) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a9291b4bc61efbc5887a3a00462757e') in 0.014321 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Props/Materials/tent_black.mat
+  artifactKey: Guid(3a420a8e3cc3c8d47b6b4e98beedf04a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Props/Materials/tent_black.mat using Guid(3a420a8e3cc3c8d47b6b4e98beedf04a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbd10a4047c11acd14114db5bff71f41') in 0.011398 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Trees/Materials/Wood_0.mat
+  artifactKey: Guid(14066eaf04f8aa5468cf2ed21942c50f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Trees/Materials/Wood_0.mat using Guid(14066eaf04f8aa5468cf2ed21942c50f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8b9614da577413caa180e7bd69881a3') in 0.018392 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Props/Materials/Roof_1.mat
+  artifactKey: Guid(4cb0bc10a45dd6b48bb7d65e61629a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Props/Materials/Roof_1.mat using Guid(4cb0bc10a45dd6b48bb7d65e61629a56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28cd653f626dc591a2fd91085a30a6e7') in 0.012503 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/Materials/Roof_2.mat
+  artifactKey: Guid(d2ff012a3605d7b43a63b985f28c0e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/Materials/Roof_2.mat using Guid(d2ff012a3605d7b43a63b985f28c0e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96af0a339bedf2e5d58374a15e7e14c5') in 0.009470 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Wood_0.mat
+  artifactKey: Guid(870bcbe66fbf1e0479f611163b71d61e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Wood_0.mat using Guid(870bcbe66fbf1e0479f611163b71d61e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccd2e0da7d8e81ad03154686abf62cce') in 0.008869 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Props/Materials/Rope_0.mat
+  artifactKey: Guid(312e8c9d96c215148b29f696d927396e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Props/Materials/Rope_0.mat using Guid(312e8c9d96c215148b29f696d927396e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2f9996b6a023b9f6d35bd24e2bbe7a9') in 0.009204 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Window_0.mat
+  artifactKey: Guid(9923ec4feaebca94382cb2c29c582cfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Window_0.mat using Guid(9923ec4feaebca94382cb2c29c582cfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '070d109888327adf1e4e6660d816100a') in 0.344375 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000090 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Roof_0.mat
+  artifactKey: Guid(d02941c1bdfb033478a0c8b66f4b4cf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Roof_0.mat using Guid(d02941c1bdfb033478a0c8b66f4b4cf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb8ab824c8486edebbd755d45b6ba71e') in 0.008682 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/Materials/Rope_0.mat
+  artifactKey: Guid(263206c895619cc46b511ee92946efe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/Materials/Rope_0.mat using Guid(263206c895619cc46b511ee92946efe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '932625bc917c2457dbfe01a699243c5c') in 0.008341 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 161.210644 seconds.
+  path: Assets/Materials/Sand2 1.mat
+  artifactKey: Guid(c4216f5099fc741e2aef745a25bbe91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Sand2 1.mat using Guid(c4216f5099fc741e2aef745a25bbe91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed6ee863a682d7e9570356c7ea9d6cc4') in 0.062392 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 35.816725 seconds.
+  path: Assets/Conifers [BOTD]/Shared Sources/Textures/BODT Conifer Trunk [Albedo] [Smoothness].tif
+  artifactKey: Guid(802f5539a44734bfcacbe5243d44edf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Conifers [BOTD]/Shared Sources/Textures/BODT Conifer Trunk [Albedo] [Smoothness].tif using Guid(802f5539a44734bfcacbe5243d44edf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c9043ae737467212f848d43af79978d') in 0.179659 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000105 seconds.
+  path: Assets/Conifers [BOTD]/Shared Sources/Textures/BODT Conifer Trunk [Normal] [AO] [Specular].psd
+  artifactKey: Guid(cc724252428df448db5a10316678900b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Conifers [BOTD]/Shared Sources/Textures/BODT Conifer Trunk [Normal] [AO] [Specular].psd using Guid(cc724252428df448db5a10316678900b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2abcc9e1f1e17571121daa70847d944d') in 0.039157 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/GrassFlowers/Textures/GrassFlowers/grassFlower10.tga
+  artifactKey: Guid(dcefc591c195a9f468e9157baa03eb4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GrassFlowers/Textures/GrassFlowers/grassFlower10.tga using Guid(dcefc591c195a9f468e9157baa03eb4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc1289e966f15d34035383db195fdef5') in 0.017093 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/GrassFlowers/Demo/DemoGrassFlowers/ReflectionProbe-0.exr
+  artifactKey: Guid(ff26dd0d532f43942b51232390841a6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GrassFlowers/Demo/DemoGrassFlowers/ReflectionProbe-0.exr using Guid(ff26dd0d532f43942b51232390841a6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95242fa7836d6e109daa09e671762a12') in 0.944474 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 640.207766 seconds.
+  path: Assets/Conifers [BOTD]/Shared Sources/Textures/BODT Conifer Bark Array [Normal] [AO] [Specular].asset
+  artifactKey: Guid(14f4181ca612e43c9b344f073e03a7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Conifers [BOTD]/Shared Sources/Textures/BODT Conifer Bark Array [Normal] [AO] [Specular].asset using Guid(14f4181ca612e43c9b344f073e03a7c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e4a8464dea207af1968073b68642056') in 0.658908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 704.368747 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Metal_1.mat
+  artifactKey: Guid(77ebce1b3526ac04895fc2e118e66e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Metal_1.mat using Guid(77ebce1b3526ac04895fc2e118e66e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebc1f14f26aff3093f1d3e1a77a4e97d') in 0.195612 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003486 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Cloth_2.mat
+  artifactKey: Guid(1a01c6b18a1403543975a0427b9682e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Cloth_2.mat using Guid(1a01c6b18a1403543975a0427b9682e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92f45d7efacaf2fe71d43f908c5260ed') in 0.039620 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Props/Materials/Cloth_0.mat
+  artifactKey: Guid(69cef479e1ab76c44acb59c69aa9bf79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Props/Materials/Cloth_0.mat using Guid(69cef479e1ab76c44acb59c69aa9bf79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e06769831b9bc307286f79d831c2f0b9') in 0.019020 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000090 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/Materials/ground_1.mat
+  artifactKey: Guid(f6d81c8a1fd46e14baa333b8eb9abd38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/Materials/ground_1.mat using Guid(f6d81c8a1fd46e14baa333b8eb9abd38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc0b91574cfc5dd6749da16f20b04e60') in 0.031746 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Cloth_6.mat
+  artifactKey: Guid(a242f6773b4ccc74193e486bc805bfd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Cloth_6.mat using Guid(a242f6773b4ccc74193e486bc805bfd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '095c9cb360c065a2bfd900d9471a1c32') in 0.020169 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000105 seconds.
+  path: Assets/Conifers [BOTD]/Render Pipeline Support/Built-in RP/Sources/Billboards/Conifer Medium_BillboardMaterial.mat
+  artifactKey: Guid(fc87aa03e15b04f0e881cbf7847f77c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Conifers [BOTD]/Render Pipeline Support/Built-in RP/Sources/Billboards/Conifer Medium_BillboardMaterial.mat using Guid(fc87aa03e15b04f0e881cbf7847f77c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efce191c8284228947906ba9a2f4fb58') in 0.088410 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/Conifers [BOTD]/Render Pipeline Support/Built-in RP/Sources/Materials/M Conifer Leaves BODT.mat
+  artifactKey: Guid(086b89f98297d43a4ae1f80ebc88e938) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Conifers [BOTD]/Render Pipeline Support/Built-in RP/Sources/Materials/M Conifer Leaves BODT.mat using Guid(086b89f98297d43a4ae1f80ebc88e938) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a3b15829257c42dffc7f7a5ce05ee73') in 0.384273 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000103 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Props/Materials/Cloth_6.mat
+  artifactKey: Guid(4b28c2a7cdac0d14a83939f106badd7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Props/Materials/Cloth_6.mat using Guid(4b28c2a7cdac0d14a83939f106badd7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f44453eccd778bd1c50b4c0f61ddafd') in 0.017995 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/Materials/Material #164.mat
+  artifactKey: Guid(891ce2ce2a740954dafd2fbc2ea33824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/Materials/Material #164.mat using Guid(891ce2ce2a740954dafd2fbc2ea33824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18f363825b6e839833e4978df0378548') in 0.010072 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000085 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Props/Materials/default.mat
+  artifactKey: Guid(48cb6f056bb7e6f44a8e17ddf09771af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Props/Materials/default.mat using Guid(48cb6f056bb7e6f44a8e17ddf09771af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5ff5a55159abc7c3e2a28421835b31e') in 0.009424 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Terrain/Materials/mountain_2.mat
+  artifactKey: Guid(0094ad794b92c06418ea6a1d2fa175ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Terrain/Materials/mountain_2.mat using Guid(0094ad794b92c06418ea6a1d2fa175ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6d2b92a1744f5476bfad384cee43612') in 0.013162 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000094 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Props/Materials/No Name.mat
+  artifactKey: Guid(acbfecae3a2829d4a9dad81425672374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Props/Materials/No Name.mat using Guid(acbfecae3a2829d4a9dad81425672374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ec5c7204e702b5ffda43caab460dc30') in 0.009967 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Props/Materials/Cloth_1.mat
+  artifactKey: Guid(c7a308f4e867cb246af707103c1e9dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Props/Materials/Cloth_1.mat using Guid(c7a308f4e867cb246af707103c1e9dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c15153cf602d79ec2933e14d4cd936f') in 0.010847 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000099 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Trees/Materials/ground_1.mat
+  artifactKey: Guid(365eb51dd4ad56342a6668b9dcdf73b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Trees/Materials/ground_1.mat using Guid(365eb51dd4ad56342a6668b9dcdf73b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f43b41f060b5c56783aa034ae7746c6') in 0.012520 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Light.mat
+  artifactKey: Guid(cee5cdb0471bc6f428e3d6d723de9f39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Light.mat using Guid(cee5cdb0471bc6f428e3d6d723de9f39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4070b954a9a8c337c208052774d72cc5') in 0.017826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000102 seconds.
+  path: Assets/Conifers [BOTD]/Render Pipeline Support/Built-in RP/Sources/Materials/M Conifer Bark Array BODT.mat
+  artifactKey: Guid(a7e78992c7c5347a29bb4ad9b987be59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Conifers [BOTD]/Render Pipeline Support/Built-in RP/Sources/Materials/M Conifer Bark Array BODT.mat using Guid(a7e78992c7c5347a29bb4ad9b987be59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ea7f6446f1872a1df9dca865a56ee86') in 0.461023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000085 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Terrain/Materials/mountain_1.mat
+  artifactKey: Guid(2569b309f278d6b469a3336c2aef60c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Terrain/Materials/mountain_1.mat using Guid(2569b309f278d6b469a3336c2aef60c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07b6f50301f85080c66da056abcafd01') in 0.009072 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Props/Materials/Metal_0.mat
+  artifactKey: Guid(92069214568c23441b861bd0afc7624c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Props/Materials/Metal_0.mat using Guid(92069214568c23441b861bd0afc7624c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de322e87bf63ac156e4e291972bb2d64') in 0.009935 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/Materials/Cloth_4.mat
+  artifactKey: Guid(bfbca9508687d8841a4877d79d449446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/Materials/Cloth_4.mat using Guid(bfbca9508687d8841a4877d79d449446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f692ab04796ebf5c04e37e333eb9fba') in 0.011150 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Cloth_4.mat
+  artifactKey: Guid(73bb492173387a344a6284831b74ea6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Cloth_4.mat using Guid(73bb492173387a344a6284831b74ea6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad5a2869e144bc7710070cd702d1d229') in 0.007657 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Props/Materials/Cloth_2.mat
+  artifactKey: Guid(fcc03893a4d513a4a85a60d8849201a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Props/Materials/Cloth_2.mat using Guid(fcc03893a4d513a4a85a60d8849201a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9aee5eefd83d1ccd2f816f7ab01e541c') in 0.008213 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Cloth_5.mat
+  artifactKey: Guid(098163776a757c842bd663b8fcb7f05e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Cloth_5.mat using Guid(098163776a757c842bd663b8fcb7f05e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f81d13c546de1d58798cee94e4d1f606') in 0.008750 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/Conifers [BOTD]/Render Pipeline Support/Built-in RP/Sources/Billboards/Conifer Bare_BillboardMaterial.mat
+  artifactKey: Guid(be7cd6e9ad58a462a91b1cae7694ef4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Conifers [BOTD]/Render Pipeline Support/Built-in RP/Sources/Billboards/Conifer Bare_BillboardMaterial.mat using Guid(be7cd6e9ad58a462a91b1cae7694ef4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bd838ae43ac9c193a18cb41cdc587f9') in 0.015686 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/Materials/Cloth_1.mat
+  artifactKey: Guid(ba62c7efb15c1bf4883c6d0a0b3854c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Unique_Buildings/Materials/Cloth_1.mat using Guid(ba62c7efb15c1bf4883c6d0a0b3854c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b09bdd2002d699c265223e60d36318cc') in 0.014087 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Cloth_0.mat
+  artifactKey: Guid(e82ace00f00645d49a08d75fd44ad39a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Civilian_Buildings/Materials/Cloth_0.mat using Guid(e82ace00f00645d49a08d75fd44ad39a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec5c766bde02230d7095df7723bd1894') in 0.007433 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Props/Materials/Cloth_4.mat
+  artifactKey: Guid(d1741f76a971f6345ae3334eed406253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Props/Materials/Cloth_4.mat using Guid(d1741f76a971f6345ae3334eed406253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0a42c5f1d584e379ae674a882361015') in 0.009451 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Terrain/Materials/default.mat
+  artifactKey: Guid(3a0ef0b800a599544bbdc25118a81154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Terrain/Materials/default.mat using Guid(3a0ef0b800a599544bbdc25118a81154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdc261fb0599bc5498eb8216edd3e21e') in 0.010550 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/Polylised - Medieval Desert City/Models/Props/Materials/Cloth_3.mat
+  artifactKey: Guid(a69b6620a96fdac4fbbb93a665e18799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polylised - Medieval Desert City/Models/Props/Materials/Cloth_3.mat using Guid(a69b6620a96fdac4fbbb93a665e18799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc60c7dde6bde69db1419b83876ca09f') in 0.010713 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1854.003486 seconds.
+  path: Assets/_TerrainAutoUpgrade/layer_BODT Conifer Trunk [Albedo] [Smoothness]3ec942c0ca31c357.terrainlayer
+  artifactKey: Guid(14696ed3586bb414da695254417d1d76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_TerrainAutoUpgrade/layer_BODT Conifer Trunk [Albedo] [Smoothness]3ec942c0ca31c357.terrainlayer using Guid(14696ed3586bb414da695254417d1d76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28508d7078125af4acee3a24cacd30b7') in 0.599445 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 236.080784 seconds.
+  path: Assets/Materials/Sand2.mat
+  artifactKey: Guid(2c6c1c835d5936c4ca9835f3ab966680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Sand2.mat using Guid(2c6c1c835d5936c4ca9835f3ab966680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdd93375314c08f3e23004d65850c947') in 0.113047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 779.399959 seconds.
+  path: Assets/Prefabs/rocks/Rock_1.prefab
+  artifactKey: Guid(00513e2960349a14bbde59585cfdb5ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/rocks/Rock_1.prefab using Guid(00513e2960349a14bbde59585cfdb5ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d22d85053b379fd1d75574dab07d3f8') in 0.498538 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000088 seconds.
+  path: Assets/Prefabs/rocks/rock_3.prefab
+  artifactKey: Guid(60a90264f25e64e45a201882d6121060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/rocks/rock_3.prefab using Guid(60a90264f25e64e45a201882d6121060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4abd0ec80f838a54f5a0a1623b28a1ee') in 0.058999 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Prefabs/rocks/rock_5.prefab
+  artifactKey: Guid(58707f431ef0bd24d92c8be36c68f30f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/rocks/rock_5.prefab using Guid(58707f431ef0bd24d92c8be36c68f30f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adeb2c7bf1c3f4689326cdfc9216df6c') in 0.017802 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Prefabs/rocks/uploads_files_3447199_DesertRockStairs.fbx
+  artifactKey: Guid(8cc7b48514b4b134dbb191cde5790338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/rocks/uploads_files_3447199_DesertRockStairs.fbx using Guid(8cc7b48514b4b134dbb191cde5790338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33e55d7ee48a50cf60dab395db80a5c9') in 0.147892 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000081 seconds.
+  path: Assets/Prefabs/rocks/rock_2.prefab
+  artifactKey: Guid(c7f0f602d19e86c4ebcf25c35b1084ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/rocks/rock_2.prefab using Guid(c7f0f602d19e86c4ebcf25c35b1084ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c99990331ce5c1244857eb63f4f3910') in 0.022039 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Prefabs/rocks/Rock_9.fbx
+  artifactKey: Guid(70e8a60a4b6a5c8409dedf7d30f44381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/rocks/Rock_9.fbx using Guid(70e8a60a4b6a5c8409dedf7d30f44381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '939c9552646cac08445c7e7608ed72af') in 0.024296 seconds 
