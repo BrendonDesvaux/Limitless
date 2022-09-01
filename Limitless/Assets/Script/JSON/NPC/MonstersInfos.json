@@ -1,0 +1,27 @@
+{
+    "monsters": [{
+        "id": 0,
+        "name": null,
+        "description": null,
+        "exp": 0.0,
+        "expToNextLevel": 0.0,
+        "health": 0.0,
+        "maxHealth": 0.0,
+        "mana": 0.0,
+        "maxMana": 0.0,
+        "strength": 0.0,
+        "armor": 0.0,
+        "magicResistance": 0.0,
+        "movementSpeed": 0.0,
+        "attackSpeed": 0.0,
+        "attackDamage": 0.0,
+        "magicDamage": 0.0,
+        "critChance": 0.0,
+        "critDamage": 0.0,
+        "dodgeChance": 0.0,
+        "rewardExp": 0,
+        "gold": 0,
+        "lvl": 0,
+        "possibleDrops": null
+    }]
+}
