@@ -36,12 +36,11 @@ public class Mob : MonoBehaviour
     {
         //check if still on ground with raycast
         if (detectedPlayers.Count > 0){
-        if (Physics.Raycast(transform.position, -Vector3.up, 1.5f))
-        {
             // target = detectedPlayers[0].Item1.position;
             targetID = detectedPlayers[0].Item2;
             //Look at target without y axis
             transform.LookAt(new Vector3(detectedPlayers[0].Item1.position.x, transform.position.y, detectedPlayers[0].Item1.position.z));
+
 
             // Get distance between transform and detectedPlayers[0].Item1.position
             Vector3 offset = transform.position - detectedPlayers[0].Item1.position;
@@ -65,15 +64,15 @@ public class Mob : MonoBehaviour
                     }else{
                         List<(Vector3, int)> notFoundPath = new List<(Vector3, int)>();
                         bool found = false;
-                        for (int i = 0; i < 10; i++)
+                        for (int i = 0; i < 20; i++)
                         {
-                            Vector3 direction = (transform.forward + (transform.right * 0.2f * i));
-                            //get hit object and raycast on an angle of 40 degrees to the right at a distance equal to the one between  detectedPlayers[0].Item1.position and transform + angle
+                            Vector3 direction = Quaternion.Euler(0, 5*i, 0) * transform.forward;
+
                             if (Physics.Raycast(transform.position, direction, out RaycastHit hitRight, distance));  //Vector3.Distance(transform.position, hit.point)))
                             {
                                 if (hitRight.collider == null)
                                     {
-                                        direction = transform.position+(transform.forward + (transform.right * 0.2f * i))*Vector3.Distance(transform.position, detectedPlayers[0].Item1.position);;
+                                        direction =transform.position+direction*distance;
                                         //raycast from hitright end to player and check if collider exists
                                         if (Physics.Linecast(direction, detectedPlayers[0].Item1.position, out RaycastHit hitCheck))
                                         {
@@ -98,15 +97,15 @@ public class Mob : MonoBehaviour
                             }       
                         }
                         if (!found){
-                            for (int i = 0; i < 9; i++)
+                            for (int i = 0; i < 20; i++)
                             {
-                                Vector3 direction = (transform.forward + (-transform.right * 0.2f * i));
-                                //get hit object and raycast on an angle of 40 degrees to the right at a distance equal to the one between  detectedPlayers[0].Item1.position and transform + angle
+                                Vector3 direction = Quaternion.Euler(0, -5*i, 0) * transform.forward;
+
                                 if (Physics.Raycast(transform.position, direction, out RaycastHit hitLeft, distance));  //Vector3.Distance(transform.position, hit.point)))
                                 {
                                     if (hitLeft.collider == null)
                                     {
-                                        direction = transform.position+(transform.forward + (-transform.right * 0.2f * i))*Vector3.Distance(transform.position, detectedPlayers[0].Item1.position);;
+                                        direction =transform.position+direction*distance;
 
                                             //raycast from hitLeft end to player and check if collider exists
                                         if (Physics.Linecast(direction, detectedPlayers[0].Item1.position, out RaycastHit hitCheck))
@@ -150,7 +149,6 @@ public class Mob : MonoBehaviour
                         }
                     }
                 }
-            }
         }
     }
 
