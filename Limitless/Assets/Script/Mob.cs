@@ -39,7 +39,7 @@ public class Mob : MonoBehaviour
             // target = detectedPlayers[0].Item1.position;
             targetID = detectedPlayers[0].Item2;
             //Look at target without y axis
-            transform.LookAt(new Vector3(detectedPlayers[0].Item1.position.x, transform.position.y, detectedPlayers[0].Item1.position.z));
+            transform.LookAt(detectedPlayers[0].Item1.position);
 
 
             // Get distance between transform and detectedPlayers[0].Item1.position
