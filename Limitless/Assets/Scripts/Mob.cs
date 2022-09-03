@@ -25,14 +25,17 @@ public class Mob : MonoBehaviour
     /// </summary>
     private void Update()
     {
+        Debug.Log(Vector3.Distance(target, transform.position));
         if (detectedPlayers.Count > 0)
         {
-            if (!animSet){
+            if(Vector3.Distance(target, transform.position) > 4f){
                 //set animation trigger "PlayerDetected"
                 animator.SetBool("PlayerDetected", true);
-                animSet = true;
+                animator.SetBool("Attack", false);
+                transform.Translate(Vector3.forward * Time.deltaTime * 10);
+            }else{
+                animator.SetBool("Attack", true);
             }
-            transform.Translate(Vector3.forward * Time.deltaTime * 10);
         }else{
             animator.SetBool("PlayerDetected", false);
             animSet = false;
@@ -47,7 +50,7 @@ public class Mob : MonoBehaviour
     {
         //check if still on ground with raycast
         if (detectedPlayers.Count > 0){
-            // target = detectedPlayers[0].Item1.position;
+            target = detectedPlayers[0].Item1.position;
             targetID = detectedPlayers[0].Item2;
             //Look at target without y axis
             transform.LookAt(detectedPlayers[0].Item1.position);
