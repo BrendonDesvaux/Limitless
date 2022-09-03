@@ -8,11 +8,14 @@ public class Mob : MonoBehaviour
     private Vector3 target;
     private int targetID;
     private  List<(Transform, int)> detectedPlayers;
+    private Animator animator;
+    private bool animSet;
 
     void Start(){
         detectedPlayers = new List<(Transform, int)>();
         target = new Vector3(0,0,0);
         sideTarget = new Vector3(0,0,0);
+        animator = transform.GetComponent<Animator>();
         //Invoke Pathfinding once every quarter second
         InvokeRepeating("PathFinding", 0.0f, 0.10f);
     }
@@ -24,7 +27,15 @@ public class Mob : MonoBehaviour
     {
         if (detectedPlayers.Count > 0)
         {
+            if (!animSet){
+                //set animation trigger "PlayerDetected"
+                animator.SetBool("PlayerDetected", true);
+                animSet = true;
+            }
             transform.Translate(Vector3.forward * Time.deltaTime * 10);
+        }else{
+            animator.SetBool("PlayerDetected", false);
+            animSet = false;
         }
     }
 
@@ -68,7 +79,7 @@ public class Mob : MonoBehaviour
                         {
                             Vector3 direction = Quaternion.Euler(0, 5*i, 0) * transform.forward;
 
-                            if (Physics.Raycast(transform.position, direction, out RaycastHit hitRight, distance));  //Vector3.Distance(transform.position, hit.point)))
+                            if (Physics.Raycast(transform.position, direction, out RaycastHit hitRight, distance))
                             {
                                 if (hitRight.collider == null)
                                     {
@@ -101,7 +112,7 @@ public class Mob : MonoBehaviour
                             {
                                 Vector3 direction = Quaternion.Euler(0, -5*i, 0) * transform.forward;
 
-                                if (Physics.Raycast(transform.position, direction, out RaycastHit hitLeft, distance));  //Vector3.Distance(transform.position, hit.point)))
+                                if (Physics.Raycast(transform.position, direction, out RaycastHit hitLeft, distance))
                                 {
                                     if (hitLeft.collider == null)
                                     {
@@ -143,7 +154,7 @@ public class Mob : MonoBehaviour
                                 }
                             }
                         }
-                        if (!found){
+                        if (!found && notFoundPath.Count > 0){
                             int random = Random.Range(0, notFoundPath.Count);
                             sideTarget = notFoundPath[random].Item1;
                         }
