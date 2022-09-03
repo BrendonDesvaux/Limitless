@@ -26,7 +26,6 @@ public class Mob : MonoBehaviour
     private void Update()
     {
         animator.ResetTrigger("Hit");
-        Debug.Log(Vector3.Distance(target, transform.position));
         if (detectedPlayers.Count > 0)
         {
             if(Vector3.Distance(target, transform.position) > 7f){
