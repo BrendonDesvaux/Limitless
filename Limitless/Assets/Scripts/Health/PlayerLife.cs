@@ -22,9 +22,12 @@ public class PlayerLife : MonoBehaviour
         lifePoints -= dmg;
         if (lifePoints <= 0)
         {   lifePoints = 0;
+
+            Application.Quit();
             //stop application in Unity Debugger
             Debug.Break();
             lifePoints = 10;
+            healthBar.value = maxLife;
         }
         healthBar.value -= 1/maxLife * dmg;
         gameManager.UpdatePlayerInfo("health", lifePoints);
