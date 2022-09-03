@@ -21,9 +21,9 @@ public class PlayerLife : MonoBehaviour
     public void Recalculate(float dmg){
         lifePoints -= dmg;
         if (lifePoints <= 0)
-        {
-            //stop application
-            Application.Quit();
+        {   lifePoints = 0;
+            //stop application in Unity Debugger
+            Debug.Break();
         }
         healthBar.value -= 1/maxLife * dmg;
         gameManager.UpdatePlayerInfo("health", lifePoints);
