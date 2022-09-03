@@ -9,7 +9,6 @@ public class Mob : MonoBehaviour
     private int targetID;
     private  List<(Transform, int)> detectedPlayers;
     private Animator animator;
-    private bool animSet;
 
     void Start(){
         detectedPlayers = new List<(Transform, int)>();
@@ -25,7 +24,6 @@ public class Mob : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        animator.ResetTrigger("Hit");
         if (detectedPlayers.Count > 0)
         {
             if(Vector3.Distance(target, transform.position) > 7f){
@@ -35,11 +33,9 @@ public class Mob : MonoBehaviour
                 transform.Translate(Vector3.forward * Time.deltaTime * 10);
             }else{
                 animator.SetBool("Attack", true);
-                animator.SetTrigger("Hit");
             }
         }else{
             animator.SetBool("PlayerDetected", false);
-            animSet = false;
         }
     }
 

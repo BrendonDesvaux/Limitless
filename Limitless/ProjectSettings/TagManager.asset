@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ground
   - NPC
+  - Weapon
   layers:
   - Default
   - TransparentFX

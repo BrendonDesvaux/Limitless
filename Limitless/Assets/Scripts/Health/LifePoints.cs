@@ -8,6 +8,7 @@ public class LifePoints : MonoBehaviour
     public float lifePoints;
     private float maxLife;
     public Slider healthBar;
+    public int ID = 0;
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class LifePoints : MonoBehaviour
         if (lifePoints <= 0)
         {
             //get game manager and call death function with second child name as parameter
-            GameObject.Find("GameManager").GetComponent<GameManager>().Death(int.Parse(transform.GetChild(1).name));
+            GameObject.Find("GameManager").GetComponent<GameManager>().Death(ID);
             Destroy(gameObject);
         }
         healthBar.value -= 1/maxLife * dmg;
@@ -31,6 +32,11 @@ public class LifePoints : MonoBehaviour
         {
             // call collision "PlayerLife" Recalculate function with damage as parameter
             collision.gameObject.GetComponent<PlayerLife>().Recalculate(1);
+        }else if(collision.gameObject.tag == "Weapon"){
+            //set animator trigger hit
+            GetComponent<Animator>().SetTrigger("Hit");
+            // call this script Recalculate function with damage as parameter
+            Recalculate(1);
         }
     }
 }
