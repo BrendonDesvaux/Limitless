@@ -25,16 +25,18 @@ public class Mob : MonoBehaviour
     /// </summary>
     private void Update()
     {
+        animator.ResetTrigger("Hit");
         Debug.Log(Vector3.Distance(target, transform.position));
         if (detectedPlayers.Count > 0)
         {
-            if(Vector3.Distance(target, transform.position) > 4f){
+            if(Vector3.Distance(target, transform.position) > 7f){
                 //set animation trigger "PlayerDetected"
                 animator.SetBool("PlayerDetected", true);
                 animator.SetBool("Attack", false);
                 transform.Translate(Vector3.forward * Time.deltaTime * 10);
             }else{
                 animator.SetBool("Attack", true);
+                animator.SetTrigger("Hit");
             }
         }else{
             animator.SetBool("PlayerDetected", false);
