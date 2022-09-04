@@ -20,6 +20,8 @@ public class PlayerLife : MonoBehaviour
 
     public void Recalculate(float dmg){
         lifePoints -= dmg;
+        healthBar.value -= 1/maxLife * dmg;
+        Debug.Log("Player life: " + lifePoints);
         if (lifePoints <= 0)
         {   lifePoints = 0;
 
@@ -30,7 +32,6 @@ public class PlayerLife : MonoBehaviour
             gameManager.UpdatePlayerInfo("health", lifePoints);
             Debug.Break();
         }
-        healthBar.value -= 1/maxLife * dmg;
         gameManager.UpdatePlayerInfo("health", lifePoints);
     }
 }

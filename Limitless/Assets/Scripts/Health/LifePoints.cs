@@ -8,6 +8,9 @@ public class LifePoints : MonoBehaviour
     private GameManager gameManager;
     public float lifePoints;
     private float maxLife;
+    private float damage;
+    private float critChance;
+    private float critDamage;
     public Slider healthBar;
     public int ID = 0;
 
@@ -16,10 +19,11 @@ public class LifePoints : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         //Get monster from list
         AllMonsters.Monster monster = gameManager.allMonsters.monsters[ID];
-        Debug.Log(monster.name);
-        Debug.Log(gameManager.allMonsters.monsters[0].name);
         lifePoints = monster.health;
-        maxLife = monster.maxHealth;
+        maxLife = Random.Range(monster.maxHealth/1.5f, monster.maxHealth*1.5f);
+        damage = Random.Range(monster.strength/2f, monster.strength*2f);
+        critChance = Random.Range(monster.critChance/2f, monster.critChance*2f);
+        critDamage = Random.Range(1, monster.critDamage*2f);
     }
 
     public void Recalculate(float dmg){
@@ -37,8 +41,13 @@ public class LifePoints : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            float totalDamage = damage;
+            if (Random.Range(1f, 101f) < critChance)
+            {
+                totalDamage *= critDamage;
+            }
             // call collision "PlayerLife" Recalculate function with damage as parameter
-            collision.gameObject.GetComponent<PlayerLife>().Recalculate(1);
+            collision.gameObject.GetComponent<PlayerLife>().Recalculate(damage);
         }else if(collision.gameObject.tag == "Weapon"){
             //set animator trigger hit
             GetComponent<Animator>().SetTrigger("Hit");

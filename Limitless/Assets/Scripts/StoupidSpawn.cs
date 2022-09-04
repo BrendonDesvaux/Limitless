@@ -14,8 +14,7 @@ public class StoupidSpawn : MonoBehaviour
             //call function "StoupidInvoke()" of gamemanager
             GameObject.Find("GameManager").GetComponent<GameManager>().StoupidInvoke();
             stoupidWasCalled = true;
-        }
-        if (gameObject.name == "Plane (1)")
+        }else if (gameObject.name == "Plane (1)")
         {
             for (int i = 0; i < 10; i++)
             {
@@ -23,6 +22,11 @@ public class StoupidSpawn : MonoBehaviour
                 slime.name = "Slime";
                 slime.transform.parent = GameObject.Find("Monsters").transform;
             }
+        }else if (gameObject.name == "Plane (2)")
+        {
+            GameObject slime = Instantiate(GameObject.Find("GameManager").GetComponent<GameManager>().slime, new Vector3(fountain.position.x, fountain.position.y + 10, fountain.position.z), Quaternion.identity) as GameObject;
+            slime.name = "Slime";
+            slime.transform.parent = GameObject.Find("Monsters").transform;
         }
     }
     

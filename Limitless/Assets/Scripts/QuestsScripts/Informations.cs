@@ -13,7 +13,12 @@ public class Informations : MonoBehaviour
         toFill.GetChild(0).GetComponent<Text>().text = texts.name;
         toFill.GetChild(1).GetComponent<Text>().text = texts.locations;
         toFill.GetChild(2).GetComponent<Text>().text = texts.questDescription;
-        toFill.GetChild(3).GetComponent<Text>().text = texts.questReward;
+        //get all objects in questReward and add them as string
+        string reward = "";
+        foreach(string obj in texts.questReward){
+            reward += " " + obj;
+        }
+        toFill.GetChild(3).GetComponent<Text>().text = reward;
         toFill.GetChild(4).GetComponent<Text>().text = "Location :";
         toFill.GetChild(5).GetComponent<Text>().text = "Reward :";
         toFill.GetChild(7).GetComponent<Button>().onClick.AddListener(() => toFill.GetChild(7).GetComponent<ButtonEvent>().Clicked(texts, npcName));

@@ -177,6 +177,8 @@ public class GameManager : MonoBehaviour
                         if (Math.Abs(yPos) > height)
                             RecTr.sizeDelta = new Vector2(RecTr.sizeDelta.x,yPos * -1 + 20);
                         yPos -= 20;
+                        questPanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
+                        questDescrPanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
                     }
                 }
             }

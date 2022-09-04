@@ -27,7 +27,7 @@ public class Quests {
         public int questCompletionNumber;
         public string questDescription;
         public int[] questObjectsIDs;
-        public string questReward;
+        public string[] questReward;
         public bool complete;
     }
 
@@ -57,8 +57,8 @@ public class PlayerInfos {
         public float magicResistance;
         public float movementSpeed;
         public float attackSpeed;
-        public float attackDamage;
-        public float magicDamage;
+        public float physicalDamage;
+        public float magicalDamage;
         public float critChance;
         public float critDamage;
         public float dodgeChance;
@@ -94,8 +94,8 @@ public class AllMonsters {
         public float magicResistance;
         public float movementSpeed;
         public float attackSpeed;
-        public float attackDamage;
-        public float magicDamage;
+        public float physicalDamage;
+        public float magicalDamage;
         public float critChance;
         public float critDamage;
         public float dodgeChance;

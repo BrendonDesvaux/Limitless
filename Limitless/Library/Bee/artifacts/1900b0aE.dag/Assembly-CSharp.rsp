@@ -388,7 +388,7 @@
 "Assets/Scripts/QuestsScripts/ContentControl.cs"
 "Assets/Scripts/QuestsScripts/Informations.cs"
 "Assets/Scripts/QuestsScripts/Quests.cs"
-"Assets/StoupidSpawn.cs"
+"Assets/Scripts/StoupidSpawn.cs"
 "Assets/TerrainGenerator/Scripts/Abstract/IGenerator.cs"
 "Assets/TerrainGenerator/Scripts/Abstract/IMap.cs"
 "Assets/TerrainGenerator/Scripts/Generators/GrassGenerator.cs"
