@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GroundCheck : MonoBehaviour
 {
-    public mouvements mouvements;
+    public Mouvements mouvements;
     //if player collider is collinding with groung
     private void OnTriggerEnter(Collider collision)
     {

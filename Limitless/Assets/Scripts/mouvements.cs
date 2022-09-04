@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class mouvements : MonoBehaviour
+public class Mouvements : MonoBehaviour
 {
     private Rigidbody rb;
     public bool isGrounded = false;
