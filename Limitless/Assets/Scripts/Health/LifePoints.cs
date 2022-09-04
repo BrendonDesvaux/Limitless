@@ -9,6 +9,7 @@ public class LifePoints : MonoBehaviour
     public float lifePoints;
     private float maxLife;
     private float damage;
+    private float physicalDamage;
     private float critChance;
     private float critDamage;
     public Slider healthBar;
@@ -22,6 +23,7 @@ public class LifePoints : MonoBehaviour
         lifePoints = monster.health;
         maxLife = Random.Range(monster.maxHealth/1.5f, monster.maxHealth*1.5f);
         damage = Random.Range(monster.strength/2f, monster.strength*2f);
+        physicalDamage = Random.Range(monster.physicalDamage/2f, monster.physicalDamage*2f);
         critChance = Random.Range(monster.critChance/2f, monster.critChance*2f);
         critDamage = Random.Range(1, monster.critDamage*2f);
     }
@@ -41,7 +43,7 @@ public class LifePoints : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            float totalDamage = damage;
+            float totalDamage = damage * physicalDamage;
             if (Random.Range(1f, 101f) < critChance)
             {
                 totalDamage *= critDamage;

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     private float min;
     private float max;
     public GameObject slime;
+    public GameObject pigMan;
     public  GameObject dungeonPortal;
     public  GameObject plane;
     public List<Vector3> dungeonsSpawnPoints;
@@ -60,14 +61,26 @@ public class GameManager : MonoBehaviour
         InvokeRepeating("GenerateDungeon", 0, 14400);
     }
 
-    public void StoupidInvoke(){
-        InvokeRepeating("SpawnSlime", 0, 30);
+    public void StoupidInvoke(string functionName){
+        InvokeRepeating(functionName, 0, 10);
+    }
+
+    private void SpawnMonsters(){
+        //spawn slime in a random position using RandomPosition() in SampleScene
+        if (SceneManager.GetActiveScene().name == "SampleScene"){
+        if(1 == UnityEngine.Random.Range(0, 2)){
+            Instantiate(slime, RandomPosition(), Quaternion.identity);
+        
+        }else{
+            Instantiate(pigMan, RandomPosition(), Quaternion.identity);
+        }
+        }
     }
 
     private void SpawnSlime(){
         //spawn slime in a random position using RandomPosition() in SampleScene
         if (SceneManager.GetActiveScene().name == "SampleScene"){
-        Instantiate(slime, RandomPosition(), Quaternion.identity);
+        Instantiate(pigMan, RandomPosition(), Quaternion.identity);
         }
     }
 

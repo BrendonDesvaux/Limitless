@@ -26,11 +26,19 @@ public class Mob : MonoBehaviour
     {
         if (detectedPlayers.Count > 0)
         {
-            if(Vector3.Distance(target, transform.position) > 7f){
+            if(Vector3.Distance(target, transform.position) > 4f){
                 //set animation trigger "PlayerDetected"
                 animator.SetBool("PlayerDetected", true);
+                if (Vector3.Distance(target, transform.position) > 10f){
+                    // run animation
+                    animator.SetBool("Run", true);
+                    transform.Translate(Vector3.forward * Time.deltaTime * 15);
+                }else{
+                    // walk animation
+                    animator.SetBool("Run", false);
+                    transform.Translate(Vector3.forward * Time.deltaTime * 10);
+                }
                 animator.SetBool("Attack", false);
-                transform.Translate(Vector3.forward * Time.deltaTime * 10);
             }else{
                 animator.SetBool("Attack", true);
             }
