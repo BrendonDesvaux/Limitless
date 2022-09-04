@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
         return new Vector3(randX, yVal, randZ);
     }
 
-    void OnLevelWasLoaded()
+    void OnSceneLoaded()
     {
         if (SceneManager.GetActiveScene().name == "SampleScene")
         {

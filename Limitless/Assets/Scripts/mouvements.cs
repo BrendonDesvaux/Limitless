@@ -10,6 +10,7 @@ public class mouvements : MonoBehaviour
     public float movementSpeed = 30;
     public float turningSpeed = 60;
     private string npc;
+    public bool locked;
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public class mouvements : MonoBehaviour
 
     void Update()
     {
-        
+        if (!locked){
         if(isGrounded == true)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -29,9 +30,13 @@ public class mouvements : MonoBehaviour
         //if click right mouse button and npc is not null then call gameManager.Interact(npc)
         if (Input.GetKeyDown(KeyCode.T) && npc != null)
         {
-            // gameObject.GetComponent<PlayerInput>().DeactivateInput();
-            if (npc != null)
+            if (npc != null){
+                // gameObject.GetComponent<PlayerInput>().DeactivateInput();
+                //get mouse to be movable
+                locked = true;
+                Cursor.lockState = CursorLockMode.None;
                 GameObject.Find("GameManager").GetComponent<GameManager>().Interact(npc);
+            }
         }
         float horizontal = Input.GetAxis("Horizontal") * turningSpeed * Time.deltaTime;
         rb.MoveRotation(rb.rotation * Quaternion.Euler(0, horizontal, 0));
@@ -39,7 +44,13 @@ public class mouvements : MonoBehaviour
         float vertical = Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime;
         rb.MovePosition(rb.position + transform.forward * vertical);
     }
+    }
 
+    public void Reactivate(){
+        locked = false;
+        //get mouse locked
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 
     /// <summary>
     /// OnTriggerEnter is called when the Collider other enters the trigger.
