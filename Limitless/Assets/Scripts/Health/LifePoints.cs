@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class LifePoints : MonoBehaviour
 {
+    private GameManager gameManager;
     public float lifePoints;
     private float maxLife;
     public Slider healthBar;
@@ -12,7 +13,13 @@ public class LifePoints : MonoBehaviour
 
     void Start()
     {
-        maxLife = GameObject.Find("GameManager").GetComponent<GameManager>().playerInfo.maxHealth;
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        //Get monster from list
+        AllMonsters.Monster monster = gameManager.allMonsters.monsters[ID];
+        Debug.Log(monster.name);
+        Debug.Log(gameManager.allMonsters.monsters[0].name);
+        lifePoints = monster.health;
+        maxLife = monster.maxHealth;
     }
 
     public void Recalculate(float dmg){
@@ -20,7 +27,7 @@ public class LifePoints : MonoBehaviour
         if (lifePoints <= 0)
         {
             //get game manager and call death function with second child name as parameter
-            GameObject.Find("GameManager").GetComponent<GameManager>().Death(ID);
+            gameManager.Death(ID);
             Destroy(gameObject);
         }
         healthBar.value -= 1/maxLife * dmg;

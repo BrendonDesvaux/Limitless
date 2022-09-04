@@ -11,10 +11,33 @@ public class GameManager : MonoBehaviour
 
     private float min;
     private float max;
+    public GameObject slime;
     public  GameObject dungeonPortal;
     public  GameObject plane;
     public List<Vector3> dungeonsSpawnPoints;
     public int generatedDungeonType;
+
+
+    private Quests.JSONData player;
+    private Quests.JSONData quests;
+    public PlayerInfos.PlayerInfo playerInfo;
+    public AllMonsters.Monsters allMonsters;
+    public TextAsset jsonPlayerQuests;
+    public TextAsset jsonNPC;
+    public TextAsset jsonPlayer;
+    public TextAsset jsonAllMonsters;
+    private Quests instQuest;
+    private AllMonsters instAllMonsters;
+    private PlayerInfos instPlayerInfos;
+
+    public GameObject panel;
+    public Transform questPanel;
+    public Transform questDescrPanel;
+    private float height;
+    private RectTransform RecTr;
+    public GameObject questB;
+    private int yPos = -55;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -24,6 +47,8 @@ public class GameManager : MonoBehaviour
         instPlayerInfos = new PlayerInfos();
         playerInfo = GetJSONPlayerInfos();
         player = GetJSONPlayerQuest();
+        allMonsters = GetJSONMonsters();
+        quests = GetJSONNPC();
     }
 
     void Start()
@@ -33,6 +58,17 @@ public class GameManager : MonoBehaviour
         height = RecTr.rect.height;
         //call function once every 4 hours
         InvokeRepeating("GenerateDungeon", 0, 14400);
+    }
+
+    public void StoupidInvoke(){
+        InvokeRepeating("SpawnSlime", 0, 30);
+    }
+
+    private void SpawnSlime(){
+        //spawn slime in a random position using RandomPosition() in SampleScene
+        if (SceneManager.GetActiveScene().name == "SampleScene"){
+        Instantiate(slime, RandomPosition(), Quaternion.identity);
+        }
     }
 
     // Update is called once per frame
@@ -105,25 +141,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private Quests.JSONData player;
-    private Quests.JSONData quests;
-    public PlayerInfos.PlayerInfo playerInfo;
-    private AllMonsters.Monsters allMonsters;
-    public TextAsset jsonPlayerQuests;
-    public TextAsset jsonNPC;
-    public TextAsset jsonPlayer;
-    public TextAsset jsonAllMonsters;
-    private Quests instQuest;
-    private AllMonsters instAllMonsters;
-    private PlayerInfos instPlayerInfos;
-
-    public GameObject panel;
-    public Transform questPanel;
-    public Transform questDescrPanel;
-    private float height;
-    private RectTransform RecTr;
-    public GameObject questB;
-    private int yPos = -55;
 
     public Quests.JSONData GetJSONPlayerQuest(){
         return instQuest.Get(jsonPlayerQuests);
