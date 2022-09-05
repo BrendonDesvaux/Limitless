@@ -187,7 +187,8 @@ VFXContextUI #output .VFXDataAnchor.port #connector
         border-color: #787878;
     }
 
-    TextElement:disabled
+
+    *:disabled
     {
         opacity: 0.5;
     }

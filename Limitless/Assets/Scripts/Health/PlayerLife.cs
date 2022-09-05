@@ -18,20 +18,24 @@ public class PlayerLife : MonoBehaviour
         healthBar.value -= 1/maxLife * (maxLife - lifePoints);
     }
 
-    public void Recalculate(float dmg){
+    public bool Recalculate(float dmg){
         lifePoints -= dmg;
         healthBar.value -= 1/maxLife * dmg;
-        Debug.Log("Player life: " + lifePoints);
-        if (lifePoints <= 0)
-        {   lifePoints = 0;
 
+        if (lifePoints <= 0)
+        {   
+            lifePoints = 0;
             Application.Quit();
             //stop application in Unity Debugger
             lifePoints = 10;
             healthBar.value = maxLife;
-            gameManager.UpdatePlayerInfo("health", lifePoints);
+            //call UpdatePlayerInfo with array of string and array of objects
+            gameManager.UpdatePlayerInfo(new string[]{"health"}, new object[]{lifePoints});
             Debug.Break();
+            return true;
         }
-        gameManager.UpdatePlayerInfo("health", lifePoints);
+        //call UpdatePlayerInfo with array of string and array of objects
+        gameManager.UpdatePlayerInfo(new string[]{"health"}, new object[]{lifePoints});
+        return false;
     }
 }

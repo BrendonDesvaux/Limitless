@@ -69,10 +69,11 @@ public class GameManager : MonoBehaviour
         //spawn slime in a random position using RandomPosition() in SampleScene
         if (SceneManager.GetActiveScene().name == "SampleScene"){
         if(1 == UnityEngine.Random.Range(0, 2)){
-            Instantiate(slime, RandomPosition(), Quaternion.identity);
-        
+            GameObject s = Instantiate(slime, RandomPosition(), Quaternion.identity) as GameObject;
+        s.transform.parent = GameObject.Find("Monsters").transform;
         }else{
-            Instantiate(pigMan, RandomPosition(), Quaternion.identity);
+            GameObject p = Instantiate(pigMan, RandomPosition(), Quaternion.identity);
+            p.transform.parent = GameObject.Find("Monsters").transform;
         }
         }
     }
@@ -253,24 +254,51 @@ public class GameManager : MonoBehaviour
     }
 
     //use playerInfo and search for the string given in parameters and update it with the new float value
-    public void UpdatePlayerInfo(string info, object newValue){
+    public void UpdatePlayerInfo(string[] info, object[] newValue){
         Type typeClass = typeof(PlayerInfos.PlayerInfo);
         FieldInfo[] properties = typeClass.GetFields();
         foreach(FieldInfo property in properties){
-            if (property.Name == info){
+            for (int i =0; i < info.Length; i++){
+            if (property.Name == info[0]){
                 //get type of property
                 string type = property.FieldType.Name;
                 if (type == "Int32"){
-                    property.SetValue(playerInfo, (int)newValue);
+                    property.SetValue(playerInfo, (int)newValue[i]);
                 }else if (type == "Single"){
-                    property.SetValue(playerInfo, (float)newValue);
+                    property.SetValue(playerInfo, (float)newValue[i]);
                 }else if (type == "String"){
-                    property.SetValue(playerInfo, newValue.ToString());
+                    property.SetValue(playerInfo, newValue[i].ToString());
                 }
+                break;
+            }
             }
         }
 
         string str = JsonUtility.ToJson(playerInfo);
         System.IO.File.WriteAllText("./Assets/Scripts/JSON/PlayerInfos.json", str);
+    }
+
+    public void UpdateMonsterInfo(string[] info, object[] newValue){
+        Type typeClass = typeof(AllMonsters.Monster);
+        FieldInfo[] properties = typeClass.GetFields();
+        foreach(FieldInfo property in properties){
+            for (int i =0; i < info.Length; i++){
+            if (property.Name == info[0]){
+                //get type of property
+                string type = property.FieldType.Name;
+                if (type == "Int32"){
+                    property.SetValue(playerInfo, (int)newValue[i]);
+                }else if (type == "Single"){
+                    property.SetValue(playerInfo, (float)newValue[i]);
+                }else if (type == "String"){
+                    property.SetValue(playerInfo, newValue[i].ToString());
+                }
+                break;
+            }
+            }
+        }
+
+        string str = JsonUtility.ToJson(playerInfo);
+        System.IO.File.WriteAllText("./Assets/Scripts/JSON/NPC/MonstersInfos.json", str);
     }
 }

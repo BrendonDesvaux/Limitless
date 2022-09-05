@@ -62,6 +62,13 @@ public class PlayerInfos {
         public float critChance;
         public float critDamage;
         public float dodgeChance;
+        public float levelHealthMultiplicator;
+        public float levelManaMultiplicator;
+        public float levelStrengthMultiplicator;
+        public float levelDexterityMultiplicator;
+        public float levelIntelligenceMultiplicator;
+        public float levelArmorMultiplicator;
+        public float levelMagicResistanceMultiplicator;
     }
 
     public PlayerInfo Get(TextAsset json) {
@@ -103,6 +110,13 @@ public class AllMonsters {
         public int gold;
         public int lvl;
         public int[] possibleDrops;
+        public float levelHealthMultiplicator;
+        public float levelManaMultiplicator;
+        public float levelStrengthMultiplicator;
+        public float levelDexterityMultiplicator;
+        public float levelIntelligenceMultiplicator;
+        public float levelArmorMultiplicator;
+        public float levelMagicResistanceMultiplicator;
     }
 
     public Monsters Get(TextAsset json) {

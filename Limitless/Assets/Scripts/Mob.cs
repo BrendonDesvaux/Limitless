@@ -9,6 +9,7 @@ public class Mob : MonoBehaviour
     private int targetID;
     private  List<(Transform, int)> detectedPlayers;
     private Animator animator;
+    public float detectionRange;
 
     void Start(){
         detectedPlayers = new List<(Transform, int)>();
@@ -26,7 +27,7 @@ public class Mob : MonoBehaviour
     {
         if (detectedPlayers.Count > 0)
         {
-            if(Vector3.Distance(target, transform.position) > 4f){
+            if(Vector3.Distance(target, transform.position) > detectionRange){
                 //set animation trigger "PlayerDetected"
                 animator.SetBool("PlayerDetected", true);
                 if (Vector3.Distance(target, transform.position) > 10f){
@@ -40,6 +41,7 @@ public class Mob : MonoBehaviour
                 }
                 animator.SetBool("Attack", false);
             }else{
+                animator.SetBool("Run", false);
                 animator.SetBool("Attack", true);
             }
         }else{

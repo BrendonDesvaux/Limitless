@@ -10,7 +10,7 @@
         "maxHealth": 10.0,
         "mana": 0.0,
         "maxMana": 0.0,
-        "strength": 1.0,
+        "strength": 10.0,
         "armor": 0.0,
         "magicResistance": 0.0,
         "movementSpeed": 0.0,
@@ -19,11 +19,18 @@
         "magicalDamage": 0.0,
         "critChance": 10.0,
         "critDamage": 1.2,
-        "dodgeChance": 0.0,
+        "dodgeChance": 5.0,
         "rewardExp": 10,
         "gold": 0,
         "lvl": 1,
-        "possibleDrops": null
+        "possibleDrops": null,
+        "levelHealthMultiplicator": 1.3,
+        "levelManaMultiplicator": 1.3,
+        "levelStrengthMultiplicator": 1.3,
+        "levelDexterityMultiplicator": 1.3,
+        "levelIntelligenceMultiplicator": 1.3,
+        "levelArmorMultiplicator": 1.3,
+        "levelMagicResistanceMultiplicator": 1.3
     },
     {
         "id": 1,
@@ -48,14 +55,21 @@
         "rewardExp": 20,
         "gold": 0,
         "lvl": 1,
-        "possibleDrops": null
+        "possibleDrops": null,
+        "levelHealthMultiplicator": 1.3,
+        "levelManaMultiplicator": 1.3,
+        "levelStrengthMultiplicator": 1.3,
+        "levelDexterityMultiplicator": 1.3,
+        "levelIntelligenceMultiplicator": 1.3,
+        "levelArmorMultiplicator": 1.3,
+        "levelMagicResistanceMultiplicator": 1.3
     },
     {
         "id": 2,
         "name": "Pigman",
         "description": "A Plain Pink Pigman",
         "exp": 0.0,
-        "expToNextLevel": 10.0,
+        "expToNextLevel": 1.0,
         "health": 50.0,
         "maxHealth": 50.0,
         "mana": 0.0,
@@ -73,7 +87,14 @@
         "rewardExp": 20,
         "gold": 0,
         "lvl": 1,
-        "possibleDrops": null
+        "possibleDrops": null,
+        "levelHealthMultiplicator": 1.3,
+        "levelManaMultiplicator": 1.3,
+        "levelStrengthMultiplicator": 1.3,
+        "levelDexterityMultiplicator": 1.3,
+        "levelIntelligenceMultiplicator": 1.3,
+        "levelArmorMultiplicator": 1.3,
+        "levelMagicResistanceMultiplicator": 1.3
     }
 ]
 }
