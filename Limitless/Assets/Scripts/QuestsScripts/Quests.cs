@@ -123,3 +123,49 @@ public class AllMonsters {
         return JsonUtility.FromJson<Monsters>(json.text);
     }
 }
+
+[Serializable]
+public class Items {
+    //list of Weapon
+    [Serializable]
+    public class WeaponList {
+        public List < Weapon > weapons;
+    }
+
+    //class containing a weapon informations"
+    [Serializable]
+    public class Item {
+        public int id;
+        public string name;
+        public string description;
+        public float damage;
+        public float attackSpeed;
+        public float attackType;
+        public float critDamageMultiplier;
+        public float critChanceMultiplier;
+        public float attackSound;
+        public bool[] attackEffectsType;
+        public float[] attackEffectsValue;
+        public float[] skills;
+    }
+}
+
+[Serializable]
+public class Poisons {
+    //list of Poison
+    [Serializable]
+    public class PoisonList {
+        public List < Poison > poisons;
+    }
+
+    //class containing a poison informations"
+    [Serializable]
+    public class Poison {
+        public int id;
+        public string name;
+        public string description;
+        public float damage;
+        public float duration;
+        public float tick;
+    }
+}

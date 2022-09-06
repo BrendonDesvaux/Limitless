@@ -1,0 +1,12 @@
+{
+    "poisons": [
+        {
+            "id": 0,
+            "name": "Low Poison",
+            "description": "Poison of low strength.",
+            "damage": 1,
+            "duration": 10,
+            "tick": 1
+        }
+    ]
+}

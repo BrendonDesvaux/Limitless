@@ -18,13 +18,13 @@ public class LifePoints : MonoBehaviour
     private float expToNextLevel;
     public Slider healthBar;
     public int ID = 0;
-    public float levelHealthMultiplicator;
-    public float levelManaMultiplicator;
-    public float levelStrengthMultiplicator;
-    public float levelDexterityMultiplicator;
-    public float levelIntelligenceMultiplicator;
-    public float levelArmorMultiplicator;
-    public float levelMagicResistanceMultiplicator;
+    private float levelHealthMultiplicator;
+    private float levelManaMultiplicator;
+    private float levelStrengthMultiplicator;
+    private float levelDexterityMultiplicator;
+    private float levelIntelligenceMultiplicator;
+    private float levelArmorMultiplicator;
+    private float levelMagicResistanceMultiplicator;
 
     void Start()
     {
@@ -51,7 +51,6 @@ public class LifePoints : MonoBehaviour
     }
 
     public void Recalculate(float dmg){
-        Debug.Log(dodgeChance);
         if(dodgeChance < Random.Range(0, 100)){
             lifePoints -= dmg;
             if (lifePoints <= 0)

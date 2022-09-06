@@ -1,0 +1,28 @@
+{
+    "Items": [{
+        "id": 0,
+        "name": "Wooden Sword",
+        "description": "A wooden sword. It's not very effective.",
+        "damage": 1,
+        "attackSpeed": 1,
+        "attackType": 0,
+        "critDamageMultiplier": 1.5,
+        "critChanceMultiplier": 1,
+        "attackSound": 0,
+        "attackEffectsType": {
+            "poison": false,
+            "bleed": false,
+            "burn": false,
+            "freeze": false,
+            "stun": false
+        },
+        "attackEffects": {
+            "poison": 0,
+            "bleed": 0,
+            "burn": 0,
+            "freeze": 0,
+            "stun": 0
+        },
+        "skills": {}
+    }]
+}
