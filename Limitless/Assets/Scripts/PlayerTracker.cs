@@ -12,7 +12,7 @@ public class PlayerTracker : MonoBehaviour
     public float speed = 30;
     public float maxZoom = 20;
 
-    public float clampMax = 90;
+    public float clampMax = 70;
     public float clampMin = -4;
 
     float clamped;
@@ -32,7 +32,7 @@ public class PlayerTracker : MonoBehaviour
         clamped = Mathf.Clamp(clamped, clampMin, clampMax);
         parentObject.rotation = Quaternion.Euler(clamped, parentObject.rotation.eulerAngles.y, 0);
         target.transform.Rotate(0, horizontal, 0);
-        zoomLevel += Input.mouseScrollDelta.y * sensitivity;
+        zoomLevel -= Input.mouseScrollDelta.y * sensitivity;
         zoomLevel = Mathf.Clamp(zoomLevel, 0, maxZoom);
         zoomPosition = Mathf.MoveTowards(zoomPosition, zoomLevel, speed * Time.deltaTime);
         transform.position = parentObject.position - (transform.forward * zoomPosition);
