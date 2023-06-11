@@ -4777,7 +4777,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e42de14b8277e1b409200d3ff9747a0a, type: 2}
+  - {fileID: 2100000, guid: 8f453ba625b4ef642b1982972d2da588, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4855,7 +4855,7 @@ Transform:
   m_GameObject: {fileID: 7454299423672674455}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1209552065046743488}
@@ -4976,6 +4976,7 @@ MonoBehaviour:
   bleedDamage: 0
   bleedDuration: 0
   bleedTick: 0
+  timeToLive: 0
 --- !u!54 &2647550340013186234
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5022,5 +5023,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.15
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}

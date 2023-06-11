@@ -11,16 +11,17 @@ public class Attack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            sphere = Instantiate(sphere);
-            sphere.transform.position = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+            //clone the sphere
+            GameObject sphereCopy = sphere;
+            // instantiate sphere at the position of the player
+            sphereCopy = Instantiate(sphere, transform.position, Quaternion.identity) as GameObject;
 
 
-
-            sphere.GetComponent<Rigidbody>().AddForce(transform.forward * 2000);
+            sphereCopy.GetComponent<Rigidbody>().AddForce(transform.forward * 2000);
             // add script Weapon with damages equal to 10
-            sphere.GetComponent<Weapon>().damage = 10;//damage;
-            sphere.tag = "Weapon";
-            Destroy(sphere, 5f);
+            sphereCopy.GetComponent<Weapon>().damage = 10;//damage;
+            sphereCopy.GetComponent<Weapon>().timeToLive = 5;//damage;
+            sphereCopy.tag = "Weapon";
         }
     }
 }

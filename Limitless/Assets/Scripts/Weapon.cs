@@ -21,4 +21,12 @@ public class Weapon : MonoBehaviour
     public float bleedDamage;
     public float bleedDuration;
     public float bleedTick;
+
+    public float timeToLive;
+
+    void Start()
+    {
+        //destroy the weapon after TTL second
+        Destroy(gameObject, timeToLive);
+    }
 }
