@@ -8,11 +8,12 @@ TagManager:
   - NPC
   - Weapon
   - Destroy
+  - UMAIgnore
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Particles
   - Water
   - UI
   - 
