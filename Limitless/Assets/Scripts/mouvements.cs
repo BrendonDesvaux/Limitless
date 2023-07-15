@@ -38,8 +38,8 @@ public class Mouvements : MonoBehaviour
                 GameObject.Find("GameManager").GetComponent<GameManager>().Interact(npc);
             }
         }
-        float horizontal = Input.GetAxis("Horizontal") * turningSpeed * Time.deltaTime;
-        rb.MoveRotation(rb.rotation * Quaternion.Euler(0, horizontal, 0));
+        float horizontal = Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime;
+        rb.MovePosition(rb.position + transform.right * horizontal);
 
         float vertical = Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime;
         rb.MovePosition(rb.position + transform.forward * vertical);
