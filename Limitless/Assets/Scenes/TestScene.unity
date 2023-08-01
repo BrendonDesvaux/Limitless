@@ -846,8 +846,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1180360707}
-  shownChunks: 1
-  chunkSize: 1
-  frequency: 0.05
+  shownChunks: 15
+  chunkSize: 20
+  frequency: 0.01
+  peak: 50
   basicLOD: 3
-  peak: 15
+  basicLODRange: 4

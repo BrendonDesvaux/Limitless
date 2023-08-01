@@ -20,6 +20,7 @@ public class Generation : MonoBehaviour
     public int basicLOD = 1;
     // basic LOD range of the chunks around the center chunk, 0 means only the center chunk is basicLOD
     public int basicLODRange = 1;
+    
 
     private List<Vector2> chunks = new List<Vector2>();
 
@@ -109,7 +110,8 @@ public class Generation : MonoBehaviour
                         depth2 *= peak;
                         depth3 *= peak;
                         depth4 *= peak;
-
+                        int actX = LOD *x;
+                        int actY = LOD *y;
                         Vector3[] vertices = new Vector3[4]
                         {
                             new Vector3(x, depth1, y),
