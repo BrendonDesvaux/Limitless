@@ -8,13 +8,19 @@ public class Generation : MonoBehaviour
     private int previousChunkX = 0;
     private int previousChunkY = 0;
     public GameObject Player;
+    // how many chunks are shown around the player
     public int shownChunks = 2;
+    // size of each chunk
     public int chunkSize = 20;
+    // frequency of ups and downs
     public float frequency = 0.1f;
+    // height of ups and downs
+    public float peak = 10f;
+    // LOD of the center chunk
     public int basicLOD = 1;
+    // basic LOD range of the chunks around the center chunk, 0 means only the center chunk is basicLOD
     public int basicLODRange = 1;
 
-    public float peak = 10f;
     private List<Vector2> chunks = new List<Vector2>();
 
     // Start is called before the first frame update
