@@ -12,6 +12,7 @@ public class Generation : MonoBehaviour
     public int chunkSize = 20;
     public float frequency = 0.1f;
     public int basicLOD = 1;
+    public int basicLODRange = 1;
 
     public float peak = 10f;
     private List<Vector2> chunks = new List<Vector2>();
@@ -78,7 +79,9 @@ public class Generation : MonoBehaviour
                 if (i == actualChunkX && j == actualChunkY)
                     LOD = basicLOD;
                 else
-                    LOD = Mathf.Max(Mathf.Abs(actualChunkX - i), Mathf.Abs(actualChunkY - j)) - 1 + basicLOD;
+                    LOD = Mathf.Max(Mathf.Abs(actualChunkX - i), Mathf.Abs(actualChunkY - j)) - basicLODRange + basicLOD;
+                if (LOD < basicLOD)
+                    LOD = basicLOD;
                 for (int x = i * chunkSize; x < (i + 1) * chunkSize; x += LOD)
                 {
                     for (int y = j * chunkSize; y < (j + 1) * chunkSize; y += LOD)
@@ -144,8 +147,6 @@ public class Generation : MonoBehaviour
         mesh.uv = uvList.ToArray();
         gameObject.GetComponent<MeshFilter>().mesh = mesh;
         gameObject.GetComponent<MeshCollider>().sharedMesh = mesh;
-        //recalculate bounds
-        mesh.RecalculateBounds();
 
 
     }
