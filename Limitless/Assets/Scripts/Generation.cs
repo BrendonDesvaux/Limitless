@@ -5,24 +5,26 @@ using UnityEngine;
 
 public class Generation : MonoBehaviour
 {
-    private struct Chunk
-    {
-        public int x;
-        public int y;
-        public List<Vector3> vertices;
-    }
     private int previousChunkX = 0;
     private int previousChunkY = 0;
     public GameObject Player;
     public int shownChunks = 2;
     public int chunkSize = 20;
     public float frequency = 0.1f;
+    public int basicLOD = 1;
+
     public float peak = 10f;
-    List<Chunk> chunks = new List<Chunk>();
+    private List<Vector2> chunks = new List<Vector2>();
+
     // Start is called before the first frame update
     void Start()
     {
-        UpdateMesh();
+        float playerX = Player.transform.position.x;
+        float playerY = Player.transform.position.z;
+
+        int actualChunkX = Mathf.CeilToInt(playerX / chunkSize);
+        int actualChunkY = Mathf.CeilToInt(playerY / chunkSize);
+        UpdateMesh(actualChunkX, actualChunkY);
     }
 
     // Update is called once per frame
@@ -31,22 +33,20 @@ public class Generation : MonoBehaviour
         float playerX = Player.transform.position.x;
         float playerY = Player.transform.position.z;
 
-        int actualChunkX = Mathf.CeilToInt(playerX / chunkSize);
-        int actualChunkY = Mathf.CeilToInt(playerY / chunkSize);
+        int actualChunkX = Mathf.FloorToInt(playerX / chunkSize);
+        int actualChunkY = Mathf.FloorToInt(playerY / chunkSize);
         if (previousChunkX != actualChunkX || previousChunkY != actualChunkY)
         {
             previousChunkX = actualChunkX;
             previousChunkY = actualChunkY;
-            UpdateMesh();
+            UpdateMesh(actualChunkX, actualChunkY);
         }
     }
 
-    void UpdateMesh() {
-            float playerX = Player.transform.position.x;
+    void UpdateMesh(int actualChunkX, int actualChunkY)
+    {
+        float playerX = Player.transform.position.x;
         float playerY = Player.transform.position.z;
-
-        int actualChunkX = Mathf.CeilToInt(playerX / chunkSize);
-        int actualChunkY = Mathf.CeilToInt(playerY / chunkSize);
 
         // Create a new Mesh object
         Mesh mesh = new Mesh();
@@ -57,6 +57,7 @@ public class Generation : MonoBehaviour
         List<Vector3> normalsList = new List<Vector3>();
         List<Vector2> uvList = new List<Vector2>();
 
+        int LOD = 1;
         int vI = 0;
         for (int i = actualChunkX - shownChunks; i <= shownChunks + actualChunkX; i++)
         {
@@ -73,17 +74,25 @@ public class Generation : MonoBehaviour
                 // }
                 // if (exists)
                 //     continue;
-                for (int x = i * chunkSize; x < (i + 1) * chunkSize; x++)
+                //lod = the smallest distance to player's chunk
+                if (i == actualChunkX && j == actualChunkY)
+                    LOD = basicLOD;
+                else
+                    LOD = Mathf.Max(Mathf.Abs(actualChunkX - i), Mathf.Abs(actualChunkY - j)) - 1 + basicLOD;
+                for (int x = i * chunkSize; x < (i + 1) * chunkSize; x += LOD)
                 {
-                    for (int y = j * chunkSize; y < (j + 1) * chunkSize; y++)
+                    for (int y = j * chunkSize; y < (j + 1) * chunkSize; y += LOD)
                     {
                         float scaledX = (float)(x * frequency);
                         float scaledY = (float)(y * frequency);
                         float depth1 = Mathf.PerlinNoise(scaledX, scaledY);
-                        scaledX = (float)((x + 1) * frequency);
+
+                        scaledX = (float)((x + LOD) * frequency);
                         float depth2 = Mathf.PerlinNoise(scaledX, scaledY);
-                        scaledY = (float)((y + 1) * frequency);
+
+                        scaledY = (float)((y + LOD) * frequency);
                         float depth3 = Mathf.PerlinNoise(scaledX, scaledY);
+
                         scaledX = (float)(x * frequency);
                         float depth4 = Mathf.PerlinNoise(scaledX, scaledY);
 
@@ -95,9 +104,9 @@ public class Generation : MonoBehaviour
                         Vector3[] vertices = new Vector3[4]
                         {
                             new Vector3(x, depth1, y),
-                            new Vector3(x+1, depth2, y),
-                            new Vector3(x+1, depth3, y+1),
-                            new Vector3(x, depth4, y+1)
+                            new Vector3(x+LOD, depth2, y),
+                            new Vector3(x+LOD, depth3, y+LOD),
+                            new Vector3(x, depth4, y+LOD)
                         };
 
                         int[] triangles = new int[6]
@@ -123,7 +132,7 @@ public class Generation : MonoBehaviour
                         trianglesList.AddRange(triangles);
                         normalsList.AddRange(normals);
                         uvList.AddRange(uv);
-                        vI+=4;
+                        vI += 4;
                     }
                 }
             }
@@ -135,6 +144,8 @@ public class Generation : MonoBehaviour
         mesh.uv = uvList.ToArray();
         gameObject.GetComponent<MeshFilter>().mesh = mesh;
         gameObject.GetComponent<MeshCollider>().sharedMesh = mesh;
+        //recalculate bounds
+        mesh.RecalculateBounds();
 
 
     }

@@ -265,6 +265,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2377755889004526487, guid: 2ddc72988ecbd411e8e6cddde7bef36d, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2377755889144915841, guid: 2ddc72988ecbd411e8e6cddde7bef36d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -472,7 +476,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963667837}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.31, z: 6.07}
+  m_LocalPosition: {x: 0, y: 20.22, z: 6.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -735,7 +739,7 @@ GameObject:
   - component: {fileID: 2062135197}
   - component: {fileID: 2062135196}
   - component: {fileID: 2062135200}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GeneratedMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -842,7 +846,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1180360707}
-  shownChunks: 5
-  chunkSize: 5
+  shownChunks: 20
+  chunkSize: 20
   frequency: 0.05
-  peak: 10
+  basicLOD: 1
+  peak: 15
