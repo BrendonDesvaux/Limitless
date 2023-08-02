@@ -20,13 +20,17 @@ public class Generation : MonoBehaviour
     public int basicLOD = 1;
     // basic LOD range of the chunks around the center chunk, 0 means only the center chunk is basicLOD
     public int basicLODRange = 1;
-    
+    float newNoise = 0;
 
     private List<Vector2> chunks = new List<Vector2>();
 
     // Start is called before the first frame update
     void Start()
     {
+        //set seed for generation with time since 1970
+        Random.InitState((int)System.DateTime.Now.Ticks);
+        newNoise = Random.Range(0f,100000f);
+
         float playerX = Player.transform.position.x;
         float playerY = Player.transform.position.z;
 
@@ -64,6 +68,7 @@ public class Generation : MonoBehaviour
         List<int> trianglesList = new List<int>();
         List<Vector3> normalsList = new List<Vector3>();
         List<Vector2> uvList = new List<Vector2>();
+        
 
         int LOD = 1;
         int vI = 0;
@@ -93,17 +98,17 @@ public class Generation : MonoBehaviour
                 {
                     for (int y = j * chunkSize; y < (j + 1) * chunkSize; y += LOD)
                     {
-                        float scaledX = (float)(x * frequency);
-                        float scaledY = (float)(y * frequency);
+                        float scaledX = (float)(x * frequency)+newNoise;
+                        float scaledY = (float)(y * frequency)+newNoise;
                         float depth1 = Mathf.PerlinNoise(scaledX, scaledY);
 
-                        scaledX = (float)((x + LOD) * frequency);
+                        scaledX = (float)((x + LOD) * frequency)+newNoise;
                         float depth2 = Mathf.PerlinNoise(scaledX, scaledY);
 
-                        scaledY = (float)((y + LOD) * frequency);
+                        scaledY = (float)((y + LOD) * frequency)+newNoise;
                         float depth3 = Mathf.PerlinNoise(scaledX, scaledY);
 
-                        scaledX = (float)(x * frequency);
+                        scaledX = (float)(x * frequency)+newNoise;
                         float depth4 = Mathf.PerlinNoise(scaledX, scaledY);
 
                         depth1 *= peak;
